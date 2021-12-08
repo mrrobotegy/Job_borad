@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'job',
+    'bootstrap4',
+    'rest_framework',
+    'django_filters',
+    'contact',
+    
 ]
 
 MIDDLEWARE = [
@@ -121,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR / "static"),
     '/var/www/static/',
 ]
 
@@ -132,3 +138,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#SENDING EMAIL WAY
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='stmp.gmail.com'
+EMAIL_HOST_USER ='mrrobotegypt@gmail.com'
+EMAIL_HOST_PASSWORD='key'
+EMAIL_USE_TLS=True
+EMAIL_PORT='587'

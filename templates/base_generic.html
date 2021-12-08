@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <div class="job_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 max-auto ">
+                    <div class="job_details_header">
+                    </div>
+                
+                    <div class="apply_job_form white-bg">
+                        <h4>Post new job</h4>
+                        {%  block content %}
+                          
+                        {% endblock content %} 
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+
+
+ 
+
+
+ 
