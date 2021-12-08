@@ -26,7 +26,7 @@ class Job (models.Model):
     category = models.ForeignKey('Catgory', on_delete=models.CASCADE)
     image = models.ImageField(upload_to=upload_image)
     
-    slug = models.SlugField(null=True, unique=True)
+    slug = models.SlugField()
     def save(self,*args, **kwargs):
         self.slug =slugify(self.titel)
         super(Job,self).save(*args, **kwargs)
